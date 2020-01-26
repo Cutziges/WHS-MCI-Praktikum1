@@ -1,0 +1,59 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27.11.2017, 18:33:30
+    Author     : Prof.Dr.AndreasM
+*/
+
+.root {
+    -toEarlyColor: lightgrey;
+    -goodColor: lime;
+    -declineColor: yellow;
+    -normalColor: black;
+    -accentColor: red;
+}
+
+.rect {
+    -fx-stroke: none;
+    -fx-stroke-type: inside;
+}
+
+#rectToEarly {
+    -fx-fill: -toEarlyColor;
+}
+
+#rectRising {
+    -fx-fill: linear-gradient(from 0% 50% to 100% 50%, -toEarlyColor, -goodColor);
+}
+
+#rectGood {
+    -fx-fill: -goodColor;
+}
+
+#rectDecline {
+    -fx-fill: -declineColor;
+}
+
+.rectTransparent {
+    -fx-fill: transparent;
+    -fx-stroke: -normalColor;
+    -fx-stroke-type: inside;
+    -fx-stroke-width: 2;
+}
+
+#rectNow {
+    -fx-stroke: -accentColor;
+    -fx-stroke-width: 4;
+}
+
+.label {
+    -fx-text-fill: -normalColor;
+}
+
+#lbNow {
+    -fx-text-fill: -accentColor;
+}
+

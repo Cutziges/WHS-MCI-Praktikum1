@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+
+<BorderPane fx:id="diagramFrame" stylesheets="@DiagramStyleSheet.css" fx:controller="weinguetediagramm.DiagramController"
+            maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="300.0" 
+            xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox fx:id="diagram" prefHeight="30.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="30.0" prefWidth="160.0" snapToPixel="false">
+               <children>
+                  <FlowPane snapToPixel="false">
+                     <children>
+                        <Rectangle styleClass="rect" id="rectToEarly" fx:id="rectToEarly"/>
+                        <Rectangle styleClass="rect" id="rectRising" fx:id="rectRising"/>
+                        <Rectangle styleClass="rect" id="rectGood" fx:id="rectGood"/>
+                        <Rectangle styleClass="rect" id="rectDecline" fx:id="rectDecline"/>
+                     </children>
+                  </FlowPane>
+                  <FlowPane snapToPixel="false">
+                     <children>
+                        <Rectangle styleClass="rectTransparent" id="rectPast" fx:id="rectPast"/>
+                        <Rectangle styleClass="rectTransparent" id="rectNow" fx:id="rectNow"/>
+                        <Rectangle styleClass="rectTransparent" id="rectFuture" fx:id="rectFuture"/>
+                     </children>
+                  </FlowPane>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="30.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label fx:id="lbVintage" />
+                        <Label fx:id="lbDecline" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0">
+                     <children>
+                        <Label fx:id="lbPast" />
+                        <Label id="lbNow" fx:id="lbNow" />
+                     </children>
+                  </HBox>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <Pane prefHeight="20.0" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <FlowPane prefHeight="20.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <Pane prefWidth="20.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefWidth="20.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
